@@ -1,0 +1,15 @@
+selengkapnya: https://youtu.be/P86nRfA3USI
+
+1. arahkan ke folder xampp kalian
+   kalau saya: cd C:\xampp/htdocs/
+2. lalu ini adalah command untuk menginstall laravelnya
+   kalau saya: composer create-project --prefer-dist laravel/laravel belajar_install_laravel
+   
+lalu tunggu sampai proses selesai
+
+3. jika sudah.. arahkan terminal ke folder yang kita buat tadi
+   kalau saya: cd belajar_install_laravel
+4. lalu ketik: php artisan serve
+5. copy link url ke google
+
+terima kasih...
