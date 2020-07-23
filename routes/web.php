@@ -18,23 +18,32 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function(){
-    $image  = asset('/upload_media/photos/pp.jpeg');
-    return view('layout/weMainBAKA', ['image' => $image]);
+    $pp  = asset('/assets/photos/pp.jpeg');
+    return view('weHomeBAKA', ['pp' => $pp]);
 });
 
 Route::get('/home', function(){
-    $image  = asset('/upload_media/photos/pp.jpeg');
-    return view('layout/weMainBAKA', ['image' => $image]);
+    $pp  = asset('/assets/photos/pp.jpeg');
+    return view('weHomeBAKA', ['pp' => $pp]);
 });
 
 Route::get('/profile', function(){
-    return view('weProfileBAKA');
+    $pp  = asset('/assets/photos/pp.jpeg');
+    return view('weProfileBAKA', ['pp' => $pp]);
 });
 
 Route::get('/exp', function(){
-    return view('weExpBAKA');
+    $pp  = asset('/assets/photos/pp.jpeg');
+    return view('weExpBAKA', ['pp' => $pp]);
 });
 
 Route::get('/portofolio', function(){
-    return view('wePortofolioBAKA');
+    $pp  = asset('/assets/photos/pp.jpeg');
+    $sertipikat = asset('assets/photos/sertifikat.png');
+    $notfound = asset('assets/photos/imgnotfound.png');
+    return view('wePortofolioBAKA', ['pp' => $pp], ['sertipikat' => $sertipikat], ['notfound' => $notfound]);
+});
+
+Route::fallback(function(){
+    return "halaman tidak titemukan";
 });
