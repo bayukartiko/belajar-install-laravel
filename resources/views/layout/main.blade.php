@@ -51,12 +51,15 @@
         .navbar{
           border: 5px solid #1b262c;
         }
+        .card{
+            margin-bottom: 30px;
+        }
     </style>
 
     <title>weBAKA</title>
   </head>
   <body>
-    
+
 <div class="konten">
   <div class="jumbotron jumbotron-fluid">
     <div class="forGambar">

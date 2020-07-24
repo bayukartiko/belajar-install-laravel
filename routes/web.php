@@ -40,10 +40,21 @@ Route::get('/exp', function(){
 Route::get('/portofolio', function(){
     $pp  = asset('/assets/photos/pp.jpeg');
     $sertipikat = asset('assets/photos/sertifikat.png');
+    $seminar = asset('assets/photos/seminar.png');
+    $android = asset('assets/photos/bikinmengaji.png');
+    $sada = asset('assets/photos/sada.jpeg');
     $notfound = asset('assets/photos/imgnotfound.png');
-    return view('wePortofolioBAKA', ['pp' => $pp], ['sertipikat' => $sertipikat], ['notfound' => $notfound]);
+    return view('wePortofolioBAKA',
+                ['pp' => $pp],
+                ['sertipikat' => $sertipikat],
+                ['seminar' => $seminar],
+                ['android' => $android],
+                ['notfound' => $notfound],
+                ['sada' => $sada]);
 });
 
 Route::fallback(function(){
-    return "halaman tidak titemukan";
+    // return "halaman tidak ditemukan";
+    // $bg  = asset('/assets/photos/darkwood.jpg');
+    return view('layout/404');
 });
