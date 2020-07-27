@@ -17,41 +17,51 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function(){
-    $pp  = asset('/assets/photos/pp.jpeg');
-    return view('weHomeBAKA', ['pp' => $pp]);
-});
+// (routing)
 
-Route::get('/home', function(){
-    $pp  = asset('/assets/photos/pp.jpeg');
-    return view('weHomeBAKA', ['pp' => $pp]);
-});
+// Route::get('/', function(){
+//     $pp  = asset('/assets/photos/pp.jpeg');
+//     return view('weHomeBAKA', ['pp' => $pp]);
+// });
 
-Route::get('/profile', function(){
-    $pp  = asset('/assets/photos/pp.jpeg');
-    return view('weProfileBAKA', ['pp' => $pp]);
-});
+// Route::get('/home', function(){
+//     $pp  = asset('/assets/photos/pp.jpeg');
+//     return view('weHomeBAKA', ['pp' => $pp]);
+// });
 
-Route::get('/exp', function(){
-    $pp  = asset('/assets/photos/pp.jpeg');
-    return view('weExpBAKA', ['pp' => $pp]);
-});
+// Route::get('/profile', function(){
+//     $pp  = asset('/assets/photos/pp.jpeg');
+//     return view('weProfileBAKA', ['pp' => $pp]);
+// });
 
-Route::get('/portofolio', function(){
-    $pp  = asset('/assets/photos/pp.jpeg');
-    $sertipikat = asset('assets/photos/sertifikat.png');
-    $seminar = asset('assets/photos/seminar.png');
-    $android = asset('assets/photos/bikinmengaji.png');
-    $sada = asset('assets/photos/sada.jpeg');
-    $notfound = asset('assets/photos/imgnotfound.png');
-    return view('wePortofolioBAKA',
-                ['pp' => $pp],
-                ['sertipikat' => $sertipikat],
-                ['seminar' => $seminar],
-                ['android' => $android],
-                ['notfound' => $notfound],
-                ['sada' => $sada]);
-});
+// Route::get('/exp', function(){
+//     $pp  = asset('/assets/photos/pp.jpeg');
+//     return view('weExpBAKA', ['pp' => $pp]);
+// });
+
+// Route::get('/portofolio', function(){
+//     $pp  = asset('/assets/photos/pp.jpeg');
+//     $sertipikat = asset('assets/photos/sertifikat.png');
+//     $seminar = asset('assets/photos/seminar.png');
+//     $android = asset('assets/photos/bikinmengaji.png');
+//     $sada = asset('assets/photos/sada.jpeg');
+//     $notfound = asset('assets/photos/imgnotfound.png');
+//     return view('wePortofolioBAKA',
+//                 ['pp' => $pp],
+//                 ['sertipikat' => $sertipikat],
+//                 ['seminar' => $seminar],
+//                 ['android' => $android],
+//                 ['notfound' => $notfound],
+//                 ['sada' => $sada]);
+// });
+
+// (routing controller)
+
+Route::get('/', 'MainControllerBAKA@home');
+Route::get('/home', 'MainControllerBAKA@home');
+Route::get('/profile', 'MainControllerBAKA@profile');
+Route::get('/exp', 'MainControllerBAKA@exp');
+Route::get('/portofolio', 'MainControllerBAKA@portofolio');
 
 Route::fallback(function(){
     // return "halaman tidak ditemukan";
